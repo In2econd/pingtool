@@ -12,8 +12,10 @@ then
 
 else
 	echo "[+] Starting Network Scan"
+	
 	for host in `seq 1 254`; do
 		ping -c 1 -W 1 $1.$host | grep "64 bytes"
 	done
+	
 	echo "[+] Network Scan Complete"
 fi
